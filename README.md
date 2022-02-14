@@ -2,7 +2,7 @@
 Payroll Process
 
 
-1) Import the PayrollDB based on the script file referred in the project location and run the script to Create DB,Tables & StoredProcedure
+1) Import the PayrollDB based on the script file(PayrollScript.sql) referred in the project location and run the script to Create DB,Tables & StoredProcedure
 2) Fetch the Server where the PayrollDB is created and update the connectionstring in appsettings.
 3) Build the project and run
 4) Navigate to 'EmployeesList" to see the list of employees
