@@ -44,23 +44,6 @@ namespace PayrollSystem.Services
             }
         }
 
-        private string GetDependentName(IGrouping<int,Employee> employees, Relation relation, string name)
-        {
-
-            if (name == "firstName")
-            {
-                return employees.Select(s1 => s1.Dependents.Where(s2 => s2.Relation == relation)
-                                       .Select(s => s.FirstName)
-                                       .FirstOrDefault()).FirstOrDefault();
-            }
-            else
-            {
-                return employees.Select(s1 => s1.Dependents.Where(s2 => s2.Relation == relation)
-                       .Select(s => s.LastName)
-                       .FirstOrDefault()).FirstOrDefault();
-            }
-        }
-
         public async Task<bool> SaveEmployee(EmployeeDto data)
         {
             try
